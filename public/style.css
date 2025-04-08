@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Modern, elegant font */
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Body with Gradient Background */
@@ -12,34 +12,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1c2526 0%, #2d3b3e 100%); /* Dark teal gradient */
+    background: linear-gradient(135deg, #1c2526 0%, #2d3b3e 100%);
     padding: 20px;
     position: relative;
     overflow-x: hidden;
 }
 
-/* Optional Background Overlay (Uncomment if you add an image) */
-/* body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/background.jpg') no-repeat center/cover;
-    opacity: 0.2;
-    z-index: -1;
-} */
-
 /* Main Container */
 .container {
-    max-width: 400px; /* Narrower for a sleek look */
+    max-width: 400px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    padding: 40px 30px; /* More vertical padding */
+    padding: 40px 30px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 1;
 }
@@ -50,36 +37,36 @@ body {
 }
 
 .profile-img {
-    width: 150px; /* Larger for impact */
-    height: 150px;
+    width: 180px; /* Increased from 150px */
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid transparent;
-    background: linear-gradient(45deg, #d4af37, #8b0000); /* Gold to burgundy gradient */
-    padding: 5px; /* Space for gradient border */
+    border: 6px solid transparent; /* Slightly thicker for larger size */
+    background: linear-gradient(45deg, #36C759, #00FF00); /* Green gradient like Close Friends */
+    padding: 6px; /* Adjusted padding for larger image */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Name and Description */
 .name {
-    font-size: 32px; /* Bolder statement */
+    font-size: 32px;
     font-weight: 700;
-    color: #1c2526; /* Dark teal text */
+    color: #1c2526;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
 }
 
 .description {
     font-size: 18px;
-    color: #555555; /* Darker gray */
+    color: #555555;
     margin-bottom: 8px;
     font-weight: 400;
 }
 
 .online-status {
     font-size: 16px;
-    color: #d4af37; /* Gold for premium feel */
+    color: #d4af37;
     margin-bottom: 30px;
     font-weight: 400;
     font-style: italic;
@@ -92,44 +79,44 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 16px 0; /* Taller buttons */
+    padding: 16px 0;
     margin: 12px 0;
     border: none;
-    border-radius: 12px; /* Softer corners */
-    font-size: 18px; /* Larger text */
+    border-radius: 12px;
+    font-size: 18px;
     font-weight: 600;
     color: #ffffff;
     text-decoration: none;
-    background: linear-gradient(90deg, #2e2e2e, #4a4a4a); /* Default gradient */
+    background: linear-gradient(90deg, #2e2e2e, #4a4a4a);
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth animation */
+    transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     letter-spacing: 0.8px;
 }
 
 /* Hover Effect */
 .link-button:hover {
-    transform: translateY(-3px); /* Lift effect */
+    transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Platform-Specific Styles */
 .tiktok {
-    background: linear-gradient(90deg, #2e2e2e, #5a7f80); /* Slate to teal */
+    background: linear-gradient(90deg, #2e2e2e, #5a7f80);
 }
 .tiktok:hover {
     background: linear-gradient(90deg, #3f3f3f, #6a9fa0);
 }
 
 .onlyfans {
-    background: linear-gradient(90deg, #8b0000, #b22222); /* Burgundy to red */
+    background: linear-gradient(90deg, #8b0000, #b22222);
 }
 .onlyfans:hover {
     background: linear-gradient(90deg, #a30000, #c73535);
 }
 
 .twitter {
-    background: linear-gradient(90deg, #1a1a1a, #3c3c3c); /* Black to gray */
+    background: linear-gradient(90deg, #1a1a1a, #3c3c3c);
 }
 .twitter:hover {
     background: linear-gradient(90deg, #2e2e2e, #4f4f4f);
@@ -138,7 +125,7 @@ body {
 /* Icon Spacing */
 .link-button span {
     margin-right: 15px;
-    font-size: 22px; /* Larger emojis */
+    font-size: 22px;
 }
 
 /* Responsive Adjustments */
@@ -148,9 +135,9 @@ body {
         max-width: 100%;
     }
     .profile-img {
-        width: 120px;
-        height: 120px;
-        padding: 4px;
+        width: 140px; /* Adjusted from 120px for mobile */
+        height: 140px;
+        padding: 5px;
     }
     .name {
         font-size: 28px;
