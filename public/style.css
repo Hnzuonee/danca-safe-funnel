@@ -3,51 +3,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; /* More elegant font */
 }
 
+/* Body with Dark Gradient */
 body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #f5e1fd 0%, #c3e6ff 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2e2e2e 100%); /* Dark charcoal gradient */
     padding: 20px;
 }
 
 /* Main Container */
 .container {
-    max-width: 500px;
+    max-width: 480px; /* Slightly narrower for precision */
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 30px;
+    background: #ffffff; /* Clean white for contrast */
+    border-radius: 16px; /* Softer, modern corners */
+    padding: 32px; /* Exact padding for balance */
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
 }
 
 /* Profile Image */
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 128px; /* Pixel-perfect size */
+    height: 128px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 15px;
-    border: 3px solid #fff;
+    margin: 0 auto 16px; /* Precise spacing */
+    border: 4px solid #d4af37; /* Gold border for luxury */
 }
 
 /* Name and Description */
 .name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 28px; /* Slightly larger for impact */
+    font-weight: 700; /* Bold but refined */
+    color: #1a1a1a; /* Deep charcoal text */
+    margin-bottom: 8px; /* Tight spacing */
+    letter-spacing: 0.5px; /* Subtle elegance */
 }
 
 .description {
     font-size: 16px;
-    color: #666;
-    margin-bottom: 25px;
+    color: #666666; /* Softer gray for contrast */
+    margin-bottom: 24px; /* Exact spacing */
+    font-weight: 400;
 }
 
 /* Buttons */
@@ -56,67 +59,76 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 15px;
-    margin: 10px 0;
+    padding: 14px 0; /* Pixel-perfect vertical padding */
+    margin: 12px 0; /* Consistent spacing */
     border: none;
-    border-radius: 10px;
+    border-radius: 8px; /* Modern, sharp corners */
     font-size: 16px;
     font-weight: 500;
-    color: #fff;
+    color: #ffffff; /* White text for contrast */
     text-decoration: none;
     cursor: pointer;
-    transition: transform 0.2s, background 0.2s;
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transitions */
+    letter-spacing: 0.5px; /* Refined typography */
 }
 
+/* Hover Effect */
 .link-button:hover {
-    transform: scale(1.03);
+    transform: translateY(-2px); /* Lift effect for luxury */
 }
 
 /* Platform-Specific Styles */
 .tiktok {
-    background: #00f2ea;
+    background: #2e2e2e; /* Dark slate */
 }
 .tiktok:hover {
-    background: #00d4d0;
+    background: #3f3f3f; /* Lighter slate */
 }
 
 .onlyfans {
-    background: #ff5e62;
+    background: #8b0000; /* Deep burgundy for exclusivity */
 }
 .onlyfans:hover {
-    background: #e05559;
+    background: #a30000; /* Slightly brighter burgundy */
 }
 
 .twitter {
-    background: #1da1f2;
+    background: #1a1a1a; /* Charcoal black */
 }
 .twitter:hover {
-    background: #1a91da;
+    background: #2e2e2e; /* Slightly lighter charcoal */
 }
 
 /* Icon Spacing */
 .link-button span {
-    margin-right: 10px;
-    font-size: 20px;
+    margin-right: 12px; /* Exact spacing */
+    font-size: 20px; /* Consistent emoji size */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 400px) {
     .container {
-        padding: 20px;
+        padding: 24px; /* Slightly less padding */
+        max-width: 100%; /* Full width on small screens */
     }
     .profile-img {
         width: 100px;
         height: 100px;
+        border-width: 3px; /* Slightly thinner border */
     }
     .name {
-        font-size: 20px;
+        font-size: 24px; /* Adjusted for smaller screens */
     }
     .description {
         font-size: 14px;
     }
     .link-button {
-        padding: 12px;
+        padding: 12px 0; /* Tighter padding */
         font-size: 14px;
+        margin: 10px 0; /* Reduced spacing */
+    }
+    .link-button span {
+        margin-right: 10px;
+        font-size: 18px;
     }
 }
