@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif; /* More elegant font */
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 /* Body with Dark Gradient */
@@ -12,45 +12,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2e2e2e 100%); /* Dark charcoal gradient */
+    background: linear-gradient(135deg, #1a1a1a 0%, #2e2e2e 100%);
     padding: 20px;
 }
 
 /* Main Container */
 .container {
-    max-width: 480px; /* Slightly narrower for precision */
+    max-width: 480px;
     width: 100%;
-    background: #ffffff; /* Clean white for contrast */
-    border-radius: 16px; /* Softer, modern corners */
-    padding: 32px; /* Exact padding for balance */
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* Profile Image */
 .profile-img {
-    width: 128px; /* Pixel-perfect size */
+    width: 128px;
     height: 128px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 16px; /* Precise spacing */
-    border: 4px solid #d4af37; /* Gold border for luxury */
+    margin: 0 auto 16px;
+    border: 4px solid #d4af37;
 }
 
 /* Name and Description */
 .name {
-    font-size: 28px; /* Slightly larger for impact */
-    font-weight: 700; /* Bold but refined */
-    color: #1a1a1a; /* Deep charcoal text */
-    margin-bottom: 8px; /* Tight spacing */
-    letter-spacing: 0.5px; /* Subtle elegance */
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
 }
 
 .description {
     font-size: 16px;
-    color: #666666; /* Softer gray for contrast */
-    margin-bottom: 24px; /* Exact spacing */
+    color: #666666;
+    margin-bottom: 8px; /* Reduced to align with online-status */
     font-weight: 400;
+}
+
+.online-status {
+    font-size: 14px; /* Slightly smaller for hierarchy */
+    color: #d4af37; /* Gold to match premium theme */
+    margin-bottom: 24px; /* Space before buttons */
+    font-weight: 400;
+    font-style: italic; /* Subtle elegance */
 }
 
 /* Buttons */
@@ -59,73 +67,78 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 14px 0; /* Pixel-perfect vertical padding */
-    margin: 12px 0; /* Consistent spacing */
+    padding: 14px 0;
+    margin: 12px 0;
     border: none;
-    border-radius: 8px; /* Modern, sharp corners */
+    border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
-    color: #ffffff; /* White text for contrast */
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transitions */
-    letter-spacing: 0.5px; /* Refined typography */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    letter-spacing: 0.5px;
 }
 
 /* Hover Effect */
 .link-button:hover {
-    transform: translateY(-2px); /* Lift effect for luxury */
+    transform: translateY(-2px);
 }
 
 /* Platform-Specific Styles */
 .tiktok {
-    background: #2e2e2e; /* Dark slate */
+    background: #2e2e2e;
 }
 .tiktok:hover {
-    background: #3f3f3f; /* Lighter slate */
+    background: #3f3f3f;
 }
 
 .onlyfans {
-    background: #8b0000; /* Deep burgundy for exclusivity */
+    background: #8b0000;
 }
 .onlyfans:hover {
-    background: #a30000; /* Slightly brighter burgundy */
+    background: #a30000;
 }
 
 .twitter {
-    background: #1a1a1a; /* Charcoal black */
+    background: #1a1a1a;
 }
 .twitter:hover {
-    background: #2e2e2e; /* Slightly lighter charcoal */
+    background: #2e2e2e;
 }
 
 /* Icon Spacing */
 .link-button span {
-    margin-right: 12px; /* Exact spacing */
-    font-size: 20px; /* Consistent emoji size */
+    margin-right: 12px;
+    font-size: 20px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 400px) {
     .container {
-        padding: 24px; /* Slightly less padding */
-        max-width: 100%; /* Full width on small screens */
+        padding: 24px;
+        max-width: 100%;
     }
     .profile-img {
         width: 100px;
         height: 100px;
-        border-width: 3px; /* Slightly thinner border */
+        border-width: 3px;
     }
     .name {
-        font-size: 24px; /* Adjusted for smaller screens */
+        font-size: 24px;
     }
     .description {
         font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .online-status {
+        font-size: 12px;
+        margin-bottom: 20px;
     }
     .link-button {
-        padding: 12px 0; /* Tighter padding */
+        padding: 12px 0;
         font-size: 14px;
-        margin: 10px 0; /* Reduced spacing */
+        margin: 10px 0;
     }
     .link-button span {
         margin-right: 10px;
