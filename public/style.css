@@ -1,1 +1,122 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5e1fd 0%, #c3e6ff 100%);
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border: 3px solid #fff;
+}
+
+/* Name and Description */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.link-button:hover {
+    transform: scale(1.03);
+}
+
+/* Platform-Specific Styles */
+.tiktok {
+    background: #00f2ea;
+}
+.tiktok:hover {
+    background: #00d4d0;
+}
+
+.onlyfans {
+    background: #ff5e62;
+}
+.onlyfans:hover {
+    background: #e05559;
+}
+
+.twitter {
+    background: #1da1f2;
+}
+.twitter:hover {
+    background: #1a91da;
+}
+
+/* Icon Spacing */
+.link-button span {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .link-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
