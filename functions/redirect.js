@@ -4,7 +4,8 @@ exports.handler = async (event, context) => {
     return {
         statusCode: 302, // Temporary redirect
         headers: {
-            Location: onlyFansUrl
+            Location: onlyFansUrl,
+            "Cache-Control": "no-cache" // Prevent caching issues
         },
         body: "" // No body needed for redirect
     };
