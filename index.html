@@ -20,10 +20,12 @@
             <span>🎶</span> TikTok
         </a>
 
-        <!-- OnlyFans Server-Side Redirect (Same Window) -->
-        <a href="/.netlify/functions/redirect" class="link-button onlyfans">
-            <span>🔒</span> Exclusive Content
-        </a>
+        <!-- OnlyFans Server-Side Redirect (Same Window via Form) -->
+        <form action="/.netlify/functions/redirect" method="POST" id="onlyfans-form">
+            <button type="submit" class="link-button onlyfans">
+                <span>🔒</span> Exclusive Content
+            </button>
+        </form>
 
         <!-- Twitter Link -->
         <a href="https://x.com/Daniela_mahmood" class="link-button twitter" target="_blank">
