@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniela Navida - Sleduj moje další stránky</title>
+    <title>Daniela Navida</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -12,22 +12,25 @@
         <img src="/foto.jpg" alt="Daniela Mahmood" class="profile-img">
 
         <!-- Name and Description -->
-        <h1 class="name">Daniela Mahmood</h1>
+        <h1 class="name">Daniela Navida</h1>
         <p class="description">Official Links</p>
+        <p class="online-status">Jsem právě online</p>
 
         <!-- TikTok Link -->
-        <a href="https://www.tiktok.com/@daniela.navida" class="link-button tiktok">
+        <a href="https://www.tiktok.com/@daniela.navida" class="link-button tiktok" target="_blank">
             <span>🎶</span> TikTok
         </a>
 
         <!-- OnlyFans Server-Side Redirect -->
-        <a href="/.netlify/functions/redirect" class="link-button onlyfans">
-            <span>🔒</span> Exclusive Content
-        </a>
+        <form action="/.netlify/functions/redirect" method="POST" id="onlyfans-form">
+            <button type="submit" class="link-button onlyfans">
+                <span>🔒</span> Exclusive Content
+            </button>
+        </form>
 
         <!-- Twitter Link -->
-        <a href="https://x.com/Daniela_mahmood" class="link-button twitter">
-            <span>Twitter</span> X
+        <a href="https://x.com/Daniela_mahmood" class="link-button twitter" target="_blank">
+            <span>🐦</span> X
         </a>
     </div>
 </body>
