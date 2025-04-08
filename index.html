@@ -1,54 +1,180 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bářiny stránky</title>
+    <title>Daniela Mahmood - Link in Bio</title>
     <style>
-        body { font-family: Georgia, serif; background-color: #fffaf0; color: #444; margin: 0; padding: 0; }
-        header { background-color: #d2691e; padding: 20px; text-align: center; color: white; }
-        nav { background-color: #222; padding: 10px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 10px; }
-        .container { padding: 20px; max-width: 800px; margin: 0 auto; }
-        .bio, .hobbies, .social { margin-bottom: 20px; }
-        footer { background-color: #d2691e; padding: 15px; text-align: center; color: white; }
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f5e1fd 0%, #c3e6ff 100%); /* Pastel gradient */
+            padding: 20px;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile image */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            border: 3px solid #fff;
+        }
+
+        /* Name and description */
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Buttons */
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .link-button:hover {
+            transform: scale(1.03);
+        }
+
+        /* Platform-specific button styles */
+        .tiktok {
+            background: #00f2ea; /* TikTok-inspired color */
+        }
+
+        .tiktok:hover {
+            background: #00d4d0;
+        }
+
+        .onlyfans {
+            background: #ff5e62; /* OnlyFans-inspired color */
+        }
+
+        .onlyfans:hover {
+            background: #e05559;
+        }
+
+        .twitter {
+            background: #1da1f2; /* X/Twitter-inspired color */
+        }
+
+        .twitter:hover {
+            background: #1a91da;
+        }
+
+        /* Icon spacing */
+        .link-button span {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 400px) {
+            .container {
+                padding: 20px;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .name {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .link-button {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bára vás vítá na svých stránkách!</h1>
-    </header>
-
-    <nav>
-        <a href="#bio">Bio</a>
-        <a href="#hobbies">Hobby</a>
-        <a href="#social">Sociální sítě</a>
-    </nav>
-
     <div class="container">
-        <section class="bio" id="bio">
-            <h2>Bio</h2>
-            <p>Jsem Bára, kreativní duše, co miluje umění, hudbu a životní styl plný radosti a inspirace. Ráda se podělím o své nápady a zážitky!</p>
-        </section>
+        <!-- Profile image -->
+        <img src="foto.jpg" alt="Daniela Mahmood" class="profile-img">
 
-        <section class="hobbies" id="hobbies">
-            <h2>Moje hobby</h2>
-            <ul>
-                <li>Hudba a koncerty 🎶</li>
-                <li>Malování a umění 🎨</li>
-                <li>Vaření a dobré jídlo 🍜</li>
-                <li>Jóga a meditace 🧘‍♀️</li>
-            </ul>
-        </section>
+        <!-- Name and description -->
+        <h1 class="name">Daniela Mahmood</h1>
+        <p class="description">Official Links</p>
 
-        <section class="social" id="social">
-            <h2>Sledujte mě na sítích</h2>
-            <p>Budu ráda, když mě budete sledovat a zapojíte se do mojí komunity!</p>
-        </section>
+        <!-- TikTok link -->
+        <a href="https://www.tiktok.com/@daniela.navida" class="link-button tiktok" target="_blank">
+            <span>🎶</span> TikTok
+        </a>
+
+        <!-- OnlyFans link (hidden POST form) -->
+        <form id="onlyFansForm" method="POST">
+            <button type="button" class="link-button onlyfans" onclick="goExclusive()">
+                <span>🔒</span> Exclusive Content
+            </button>
+        </form>
+
+        <!-- X/Twitter link -->
+        <a href="https://x.com/Daniela_mahmood" class="link-button twitter" target="_blank">
+            <span>🐦</span> X
+        </a>
     </div>
 
-    <footer>
-        &copy; 2024 Bářiny stránky
-    </footer>
+    <script>
+        function goExclusive() {
+            // Base64-encoded OnlyFans URL
+            const encodedURL = "aHR0cHM6Ly9vbmx5ZmFucy5jb20vZGFuaV9tYWhtb29k";
+            // Decode URL
+            const decodedURL = atob(encodedURL);
+            // Set form action dynamically
+            const form = document.getElementById("onlyFansForm");
+            form.action = decodedURL;
+            // Submit form via POST
+            form.submit();
+        }
+    </script>
 </body>
 </html>
