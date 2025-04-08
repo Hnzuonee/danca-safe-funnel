@@ -1,12 +1,18 @@
 exports.handler = async (event, context) => {
-    const onlyFansUrl = "https://onlyfans.com/dani_mahmood";
-
-    return {
-        statusCode: 302, // Temporary redirect
-        headers: {
-            Location: onlyFansUrl,
-            "Cache-Control": "no-cache" // Prevent caching issues
-        },
-        body: "" // No body needed for redirect
-    };
+    try {
+        const onlyFansUrl = "https://onlyfans.com/dani_mahmood";
+        return {
+            statusCode: 302,
+            headers: {
+                Location: onlyFansUrl,
+                "Cache-Control": "no-cache"
+            },
+            body: ""
+        };
+    } catch (error) {
+        return {
+            statusCode: 500,
+            body: "Oops, something went wrong. Please try again."
+        };
+    }
 };
