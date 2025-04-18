@@ -1,162 +1,53 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Body with Gradient Background */
+/* Font & reset */
 body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #1c2526 0%, #2d3b3e 100%);
-    padding: 20px;
-    position: relative;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f0f4, #dadde8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Main Container */
 .container {
-    max-width: 400px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 40px 30px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    position: relative;
-    z-index: 1;
-}
-
-/* Profile Image Wrapper */
-.profile-wrapper {
-    margin-bottom: 20px;
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .profile-img {
-    width: 180px; /* Increased from 150px */
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid transparent; /* Slightly thicker for larger size */
-    background: linear-gradient(45deg, #36C759, #00FF00); /* Green gradient like Close Friends */
-    padding: 6px; /* Adjusted padding for larger image */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Name and Description */
-.name {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1c2526;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    letter-spacing: 1px;
-}
+.name { margin: 18px 0 4px; font-size: 28px; font-weight: 700; }
+.description { margin: 0 0 8px; color: #555; }
+.online-status { margin: 0 0 28px; color: #28a745; font-size: 14px; }
 
-.description {
-    font-size: 18px;
-    color: #555555;
-    margin-bottom: 8px;
-    font-weight: 400;
-}
-
-.online-status {
-    font-size: 16px;
-    color: #d4af37;
-    margin-bottom: 30px;
-    font-weight: 400;
-    font-style: italic;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* Buttons */
 .link-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 16px 0;
-    margin: 12px 0;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    text-decoration: none;
-    background: linear-gradient(90deg, #2e2e2e, #4a4a4a);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.8px;
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 14px;
+  transition: transform .15s ease;
 }
+.link-button:hover { transform: scale(1.04); }
+.link-button:active { transform: scale(0.96); }
 
-/* Hover Effect */
-.link-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Platform-Specific Styles */
-.tiktok {
-    background: linear-gradient(90deg, #2e2e2e, #5a7f80);
-}
-.tiktok:hover {
-    background: linear-gradient(90deg, #3f3f3f, #6a9fa0);
-}
-
-.onlyfans {
-    background: linear-gradient(90deg, #8b0000, #b22222);
-}
-.onlyfans:hover {
-    background: linear-gradient(90deg, #a30000, #c73535);
-}
-
-.twitter {
-    background: linear-gradient(90deg, #1a1a1a, #3c3c3c);
-}
-.twitter:hover {
-    background: linear-gradient(90deg, #2e2e2e, #4f4f4f);
-}
-
-/* Icon Spacing */
-.link-button span {
-    margin-right: 15px;
-    font-size: 22px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 400px) {
-    .container {
-        padding: 30px 20px;
-        max-width: 100%;
-    }
-    .profile-img {
-        width: 140px; /* Adjusted from 120px for mobile */
-        height: 140px;
-        padding: 5px;
-    }
-    .name {
-        font-size: 28px;
-    }
-    .description {
-        font-size: 16px;
-        margin-bottom: 6px;
-    }
-    .online-status {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-    .link-button {
-        padding: 14px 0;
-        font-size: 16px;
-        margin: 10px 0;
-    }
-    .link-button span {
-        margin-right: 12px;
-        font-size: 20px;
-    }
-}
+/* barevné varianty */
+.tiktok { background:#000; }
+.twitter { background:#1da1f2; }
+.vip     { background:#111; }
