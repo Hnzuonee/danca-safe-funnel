@@ -48,22 +48,22 @@
     .description { margin: 0 0 6px; color:#555; font-size:15px }
     .online-status { margin: 0 0 28px; color:#28a745; font-size:14px; font-weight:600 }
     .link-button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 16px 20px;
-      margin: 12px 0;
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-      text-decoration: none;
-      border: none;
-      border-radius: 16px;
-      cursor: pointer;
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .link-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,.18); }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 16px 20px;
+  margin: 12px auto; /* center horizontally */
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}    .link-button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,.18); }
     .link-button:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,.12); }
     .tiktok { background:#000; }
     .twitter { background:#1da1f2; }
