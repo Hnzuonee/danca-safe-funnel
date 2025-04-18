@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniela Mahmood - Exclusive Hub</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniela Mahmood – Exclusive Hub</title>
+
+  <!-- —— OG náhled (nahraď URL domény a obrázku) —— -->
+  <meta property="og:title" content="Daniela Mahmood – Official Links">
+  <meta property="og:description" content="Find all my verified links & VIP access here.">
+  <meta property="og:image" content="/foto.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://TVOJE‑DOMENA.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Profile Image -->
-        <div class="profile-wrapper">
-            <img src="/foto.jpg" alt="Daniela Mahmood" class="profile-img">
-        </div>
-
-        <!-- Name and Description -->
-        <h1 class="name">Daniela Mahmood</h1>
-        <p class="description">Official Links</p>
-        <p class="online-status">jsem právě online</p>
-
-        <!-- TikTok Link -->
-        <a href="https://www.tiktok.com/@daniela.navida" class="link-button tiktok" target="_blank">
-            <span>🎶</span> TikTok
-        </a>
-
-        <!-- OnlyFans Server-Side Redirect -->
-        <form action="/.netlify/functions/redirect" method="POST" id="onlyfans-form">
-            <button type="submit" class="link-button onlyfans">
-                <span>🔒</span> Exclusive Content
-            </button>
-        </form>
-
-        <!-- Twitter Link -->
-        <a href="https://x.com/Daniela_mahmood" class="link-button twitter" target="_blank">
-            <span>🐦</span> X
-        </a>
+  <div class="container">
+    <!-- Profilovka -->
+    <div class="profile-wrapper">
+      <img src="/foto.jpg" alt="Daniela Mahmood" class="profile-img">
     </div>
+
+    <!-- Jméno + popis -->
+    <h1 class="name">Daniela Mahmood</h1>
+    <p class="description">Official Links</p>
+    <p class="online-status">jsem právě online</p>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@daniela.navida"
+       class="link-button tiktok"
+       target="_blank" rel="noopener">
+       🎶 TikTok
+    </a>
+
+    <!-- VIP / OnlyFans (POST → 302) -->
+    <form action="/.netlify/functions/vip" method="POST">
+      <button type="submit" class="link-button vip" aria-label="VIP Access">
+        🔒 Exclusive Content
+      </button>
+    </form>
+
+    <!-- Twitter / X -->
+    <a href="https://x.com/Daniela_mahmood"
+       class="link-button twitter"
+       target="_blank" rel="noopener">
+       🐦 X
+    </a>
+  </div>
 </body>
 </html>
